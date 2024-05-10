@@ -24,7 +24,7 @@ namespace App // Note: actual namespace depends on the project name.
 
             CarRental carRental = new(start, finish, new Vehicle(model));
 
-            RentalService rentalService = new(hour, day);
+            RentalService rentalService = new(hour, day, new BrazilTaxService());
 
             rentalService.ProcessInvoice(carRental);
 
